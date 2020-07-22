@@ -1,31 +1,27 @@
 const assertEqual = function(actual, expected) {
-  if(actual === expected) {
+  if (actual === expected) {
     console.log(`✔️✔️ Assertion Passed: ${actual} === ${expected}`);
-  }else{
+  } else {
     console.log(`🛑🛑 Assertion Failed: ${actual}!== ${expected}`);
   }
 };
 
 const eqArrays = function(array1, array2) {
   //check if the length is equal
-  console.log('arra1 length: ', array1.length);
-  console.log('arra1 length: ', array2.length);
   if (array1.length !== array2.length) {
    
-    return actual = false;
+    return  false;
   }
   //check each element of the arrays by looping
   for (let i = 0; i < array1.length; i++) {
-    console.log('print array1 index',i ,array1[i]);
-    console.log('print array2 index',i ,array2[i]);
+    
     if (array1[i] !== array2[i]) {
-      console.log('print false');
-      return actual = false;
+      return false;
     }
   }
-  console.log('print true')
-  return actual = true;
-}
+  console.log('print true');
+  return true;
+};
 
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
