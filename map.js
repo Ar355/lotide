@@ -1,3 +1,8 @@
+// map func will take tow argumnets
+//1. an array to map
+//2. a callback function
+//the map will return a new array base on the result of the call back func
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✔️✔️ Assertion Passed: ${actual} === ${expected}`);
@@ -23,9 +28,17 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
+const words = ["ground", "control", "to", "major", "tom"];
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+const map = function(array, callback) {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item))
+  }
+  return results;
+};
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]) , true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]) , false);
+const results1 = map(words, word => word[0]);
+console.log(results1);
+
+assertEqual(eqArrays(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]), true);

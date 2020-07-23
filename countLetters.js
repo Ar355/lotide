@@ -21,4 +21,4 @@ const countLetters = function(string) {
   return objectCount;
 };
 
-assertEqual(countLetters('lhl'), {l: 2, h: 1});
+countLetters('lhl');
