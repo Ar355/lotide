@@ -8,10 +8,11 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
-  console.log(string);
   const objectCount = {};
   for (let indx of string) {
+    console.log(indx);
     if (objectCount[indx]) {
+      console.log('print: ' , indx);
       objectCount[indx]++;
     } else {
       objectCount[indx] = 1;
@@ -21,4 +22,4 @@ const countLetters = function(string) {
   return objectCount;
 };
 
-countLetters('lhl');
+console.log(countLetters('lhl'));
