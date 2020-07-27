@@ -23,3 +23,4 @@ const object1 = {
 
 
 console.log(findKey(object1, x => x.stars === 2));
+
