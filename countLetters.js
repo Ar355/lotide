@@ -22,4 +22,4 @@ const countLetters = function(string) {
   return objectCount;
 };
 
-console.log(countLetters('lhl'));
+countLetters('lhl');
