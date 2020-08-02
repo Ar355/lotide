@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@ar355/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "clone of Lodas library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Ar355/lotide.git"
   },
-  "author": "",
+  "author": "Arian Zeneli",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ar355/lotide/issues"

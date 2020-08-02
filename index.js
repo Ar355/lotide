@@ -4,8 +4,8 @@ const middle = require('./middle');
 const assertEqual = require('./assertEqual');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  assertEqual: assertEqual,
+  head,
+  tail,
+  middle,
+  assertEqual
 };

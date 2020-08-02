@@ -19,10 +19,10 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const eqObjects = function(firsObj, secObj) {
-  const firsKeys = Object.keys(firsObj);//create an array with all the object1 keys
+const eqObjects = function(obj2, obj1) {
+  const firsKeys = Object.keys(obj2);//create an array with all the object1 keys
   // console.log('Print firstKey: ', firsKeys);
-  const secKeys = Object.keys(secObj); //create an array with all the object2 keys
+  const secKeys = Object.keys(obj1); //create an array with all the object2 keys
   // console.log('Print secKey: ', secKeys);
 
   //check if the length of the arrays containing the object keys are equal
@@ -32,16 +32,16 @@ const eqObjects = function(firsObj, secObj) {
     //loop throu the arrays, sicne they are equal in length use one loop for both
     for (let key of firsKeys) {
       //checking if the value of the object key is an array
-      if (Array.isArray(firsObj[key])) {
+      if (Array.isArray(obj2[key])) {
         //loop throy the arrays, and check fi the value of each is not equal
-        for (let i = 0; i < firsObj[key].length; i++) {
-          if (firsObj[key][i] !== secObj[key][i]) {
+        for (let i = 0; i < obj2[key].length; i++) {
+          if (obj2[key][i] !== obj1[key][i]) {
             return false;
           }
         }
       } else {
         // if is not an array than compare if the key values are not equal
-        if (firsObj[key] !== secObj[key]) {
+        if (obj2[key] !== obj1[key]) {
           return false;
         }
       }
